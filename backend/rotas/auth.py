@@ -30,6 +30,7 @@ class UserCreate(BaseModel):
     nome: str
     senha: str
     foto: Optional[str] = None
+    token: str = ''
 
 def create_access_token(data: dict, expires_delta: Optional[timedelta] = None):
     to_encode = data.copy()
